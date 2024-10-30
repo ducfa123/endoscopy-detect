@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package example;
+
+message InferRequest {
+    string image_path = 1;
+    string logId = 2;
+    string sessionId = 3;
+}
+
+message InferResponse {
+    string response = 1;
+    string logId = 2;
+    string sessionId = 3;
+}
+
+service InferService {
+    rpc StartInfer (InferRequest) returns (InferResponse) {}
+}

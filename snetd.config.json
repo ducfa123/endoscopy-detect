@@ -1,0 +1,19 @@
+{
+  "blockchain_enabled": true,
+  "blockchain_network_selected": "sepolia",
+  "daemon_end_point": "0.0.0.0:7000",
+  "daemon_group_name": "gr",
+  "ipfs_end_point": "http://ipfs.singularitynet.io:80",
+  "organization_id": "111002",
+  "service_id": "lesion_service_1",
+  "passthrough_enabled": true,
+  "passthrough_endpoint": "http://127.0.0.1:7777",
+  "payment_channel_cert_path": "/var/lib/etcd/cfssl/client.pem",
+  "payment_channel_ca_path": "/var/lib/etcd/cfssl/ca.pem",
+  "payment_channel_key_path": "/var/lib/etcd/cfssl/client-key.pem",
+  "log": {"level": "debug", "output": {"type": "stdout"}},
+  "cors": {
+    "enabled": true,
+    "allowed_origins": ["*"]
+}
+}

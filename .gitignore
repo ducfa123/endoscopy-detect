@@ -1,0 +1,7 @@
+./best_endoscopy_image_detection.onnx
+./best_lesion_detection.onnx
+./output_endoscopy
+./data
+./.venv
+./paid_server/venv
+./payment-app/node_modules

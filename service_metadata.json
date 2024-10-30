@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "display_name": "lesion-service",
+    "encoding": "proto",
+    "service_type": "grpc",
+    "service_api_source": "ipfs://QmQLER8qJezhvGfj3GvdWHS78MtheQjnR6QccxsaLtnATS",
+    "mpe_address": "0x7E0aF8988DF45B824b2E0e0A87c6196897744970",
+    "groups": [
+        {
+            "group_name": "gr",
+            "endpoints": [
+                "http://0.0.0.0:7000"
+            ],
+            "pricing": [
+                {
+                    "price_model": "fixed_price",
+                    "price_in_cogs": 1,
+                    "default": true
+                }
+            ],
+            "group_id": "NQxRz+fovX3ggpZov9aWt3xQmqzGDbXZ4qgp5J1PMIY="
+        }
+    ],
+    "assets": {},
+    "media": [],
+    "tags": []
+}
