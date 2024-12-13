@@ -1,0 +1,30 @@
+{
+    "org_name": "meaiorg",
+    "org_id": "meai",
+    "org_type": "individual",
+    "description": {
+        "description": "Describe your organization details here",
+        "short_description": "This is short description of your organization",
+        "url": "https://anyurlofyourorganization"
+    },
+    "assets": {},
+    "contacts": [],
+    "groups": [
+        {
+            "group_name": "meaiorg",
+            "group_id": "PlzrdtuQGUWBV83MOTYsAp3tzwtaG9SM2cmaHwtz+k4=",
+            "payment": {
+                "payment_address": "0x74da5D63b88dE183beFBf2EB7EB85091e98dacb9",
+                "payment_expiration_threshold": 40320,
+                "payment_channel_storage_type": "etcd",
+                "payment_channel_storage_client": {
+                    "connection_timeout": "7s",
+                    "request_timeout": "5s",
+                    "endpoints": [
+                        "https://192.168.1.103:2379"
+                    ]
+                }
+            }
+        }
+    ]
+}

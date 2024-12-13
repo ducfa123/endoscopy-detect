@@ -1,15 +1,15 @@
 {
     "version": 1,
-    "display_name": "lesion-service",
+    "display_name": "meai-service",
     "encoding": "proto",
     "service_type": "grpc",
-    "service_api_source": "ipfs://QmQLER8qJezhvGfj3GvdWHS78MtheQjnR6QccxsaLtnATS",
+    "service_api_source": "ipfs://QmS9gHgTuc6rVUjh5sYTLZguvksxgc2G96K5t9LSUYwZjx",
     "mpe_address": "0x7E0aF8988DF45B824b2E0e0A87c6196897744970",
     "groups": [
         {
-            "group_name": "gr",
+            "group_name": "meaiorg",
             "endpoints": [
-                "http://0.0.0.0:7000"
+                "https://127.0.0.1:7777"
             ],
             "pricing": [
                 {
@@ -18,10 +18,14 @@
                     "default": true
                 }
             ],
-            "group_id": "NQxRz+fovX3ggpZov9aWt3xQmqzGDbXZ4qgp5J1PMIY="
+            "group_id": "PlzrdtuQGUWBV83MOTYsAp3tzwtaG9SM2cmaHwtz+k4="
         }
     ],
     "assets": {},
     "media": [],
-    "tags": []
+    "tags": [],
+    "service_description": {
+        "description": "Description of my Service.",
+        "url": "https://service.users.guide"
+    }
 }
