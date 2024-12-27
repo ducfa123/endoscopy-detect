@@ -328,7 +328,7 @@ def detect_single(img_path: str, confidence=0.5, save_path='output', filename='f
     :param view: int, 0-not show, 1-show image with drew box/dot, -1-show cut ROI
     :param save: int, 0-not save, 1-save image with drew box/dot, -1-save cut ROI
     :param save_path: str, folder to save image/roi
-    :return: None
+    :return: list of paths to the marked images
     """
     # ################ #
     # INFERENCE STEP   #
@@ -356,21 +356,22 @@ def detect_single(img_path: str, confidence=0.5, save_path='output', filename='f
         print("Cannot find any thing in %s !" % name)
         # if save:
         #     cv2.imwrite(os.path.join(save_path, name), pad_image)
-        return
+        return []
     print("Found in %s! Detect time: %.3f" % (name, (e1 - s)))
 
     draw, cropped_images = draw_boxes(src_im.copy(), boxes, scores, labels)
-    cv2.imwrite(os.path.join(save_path, f"marked-{filename}-lesion.png"), draw)
+    marked_image_path = os.path.join(save_path, f"marked-{filename}-lesion.png")
+    cv2.imwrite(marked_image_path, draw)
 
-    output_path = os.path.join(save_path,f'output_{filename}_lesion')
+    output_path = os.path.join(save_path, f'output_{filename}_lesion')
     if not os.path.exists(output_path):
         os.makedirs(output_path)
     
-    list_path = []
-    for idx, cropped_image in enumerate(cropped_images):
-        path_file = os.path.join(output_path, f"output_{filename}_lesion_{idx}.png")
-        cv2.imwrite(path_file, cropped_image)
-        list_path.append(path_file)
+    list_path = [marked_image_path]
+    # for idx, cropped_image in enumerate(cropped_images):
+    #     path_file = os.path.join(output_path, f"output_{filename}_lesion_{idx}.png")
+    #     cv2.imwrite(path_file, cropped_image)
+    #     list_path.append(path_file)
     return list_path
 
 
