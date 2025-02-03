@@ -220,7 +220,7 @@ def release_payment():
 @app.post("/predict")
 async def predict(input_cid: str = Form(...)):
     try:
-        input_file_path = "/media/bui-minh-duc/DATA/meai-core/paid_server/temp_input_image.jpg"
+        input_file_path = "/media/bui-minh-duc/DATA1/meai-core/paid_server/temp_input_image.jpg"
         # Download file từ IPFS
         download_from_ipfs(input_cid, input_file_path)
 
